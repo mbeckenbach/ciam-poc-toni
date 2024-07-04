@@ -54,6 +54,29 @@ public static class Config
                         "verification",
                         "api1"
                     }
+                },
+                // Simulates the Webshop app
+                new Client
+                {
+                    ClientId = "webshop",
+                    ClientSecrets = { new Secret("webshops-super-secret".Sha256()) },
+
+                    AllowedGrantTypes = GrantTypes.Code,
+                    
+                    // where to redirect to after login
+                    RedirectUris = { "https://localhost:5003/signin-oidc" },
+
+                    // where to redirect to after logout
+                    PostLogoutRedirectUris = { "https://localhost:5003/signout-callback-oidc" },
+
+                    AllowOfflineAccess = true,
+
+                    AllowedScopes =
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "verification"
+                    }
                 }
              };
 }

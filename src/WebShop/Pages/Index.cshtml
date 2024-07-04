@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the fake web shop</h1>
+    <h2>Imagine you could buy some products here.</h2>
+    <br>
+     @if(User.Identity?.IsAuthenticated == false) {
+    <p>
+        <h3 style="opacity: .4">Please log in to unlock further functionality.</h3>
+    </p>
+    } else {
+        <button>Simulate order</button>
+    }
+</div>
