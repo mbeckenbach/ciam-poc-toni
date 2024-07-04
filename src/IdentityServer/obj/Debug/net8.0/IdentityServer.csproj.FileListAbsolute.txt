@@ -50,3 +50,4 @@
 /Users/max/Source/identity-poc/ciampoc/src/IdentityServer/bin/Debug/net8.0/IdentityServer.staticwebassets.runtime.json
 /Users/max/Source/identity-poc/ciampoc/src/IdentityServer/obj/Debug/net8.0/IdentityServer.RazorAssemblyInfo.cache
 /Users/max/Source/identity-poc/ciampoc/src/IdentityServer/obj/Debug/net8.0/IdentityServer.RazorAssemblyInfo.cs
+/Users/max/Source/identity-poc/Ciampoc/src/IdentityServer/bin/Debug/net8.0/keys/is-signing-key-C39930C855B36AE0B2C46AEB8D34E181.json
