@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "VvoB3kPDg90=",
+  "dgSpecHash": "nMdUbE5Yl4A=",
   "success": true,
   "projectFilePath": "/Users/max/Source/identity-poc/quickstart/src/IdentityServer/IdentityServer.csproj",
   "expectedPackageFiles": [
     "/Users/max/.nuget/packages/duende.identityserver/7.0.4/duende.identityserver.7.0.4.nupkg.sha512",
     "/Users/max/.nuget/packages/duende.identityserver.storage/7.0.4/duende.identityserver.storage.7.0.4.nupkg.sha512",
     "/Users/max/.nuget/packages/identitymodel/6.2.0/identitymodel.6.2.0.nupkg.sha512",
-    "/Users/max/.nuget/packages/microsoft.aspnetcore.authentication.openidconnect/8.0.3/microsoft.aspnetcore.authentication.openidconnect.8.0.3.nupkg.sha512",
+    "/Users/max/.nuget/packages/microsoft.aspnetcore.authentication.openidconnect/8.0.6/microsoft.aspnetcore.authentication.openidconnect.8.0.6.nupkg.sha512",
     "/Users/max/.nuget/packages/microsoft.aspnetcore.dataprotection.abstractions/8.0.3/microsoft.aspnetcore.dataprotection.abstractions.8.0.3.nupkg.sha512",
     "/Users/max/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "/Users/max/.nuget/packages/microsoft.extensions.configuration.binder/8.0.0/microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",

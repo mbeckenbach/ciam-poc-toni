@@ -9,6 +9,7 @@
       "IdentityServer/1.0.0": {
         "dependencies": {
           "Duende.IdentityServer": "7.0.4",
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "8.0.6",
           "Serilog.AspNetCore": "8.0.0"
         },
         "runtime": {
@@ -18,7 +19,7 @@
       "Duende.IdentityServer/7.0.4": {
         "dependencies": {
           "Duende.IdentityServer.Storage": "7.0.4",
-          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "8.0.3"
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "8.0.6"
         },
         "runtime": {
           "lib/net8.0/Duende.IdentityServer.dll": {
@@ -47,14 +48,14 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authentication.OpenIdConnect/8.0.3": {
+      "Microsoft.AspNetCore.Authentication.OpenIdConnect/8.0.6": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.1.2"
         },
         "runtime": {
           "lib/net8.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {
-            "assemblyVersion": "8.0.3.0",
-            "fileVersion": "8.0.324.11615"
+            "assemblyVersion": "8.0.6.0",
+            "fileVersion": "8.0.624.26909"
           }
         }
       },
@@ -359,12 +360,12 @@
       "path": "identitymodel/6.2.0",
       "hashPath": "identitymodel.6.2.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Authentication.OpenIdConnect/8.0.3": {
+    "Microsoft.AspNetCore.Authentication.OpenIdConnect/8.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-23d/HjzJQN2CJrBpCDqSjbZQMBPpHEhTFXAN5Xoo3CODsJVcAZBqluobUjVoRtlGcn3/C9vRzAfqN53ATRd1UA==",
-      "path": "microsoft.aspnetcore.authentication.openidconnect/8.0.3",
-      "hashPath": "microsoft.aspnetcore.authentication.openidconnect.8.0.3.nupkg.sha512"
+      "sha512": "sha512-4cACDrBi9I5mhTlv8HjcTE3J/P4qUUbrRHPVKwZ+yo8xvw5rZo2ue2vPe0fNriATe9LUvVhR8/iSk+H3kbDnFQ==",
+      "path": "microsoft.aspnetcore.authentication.openidconnect/8.0.6",
+      "hashPath": "microsoft.aspnetcore.authentication.openidconnect.8.0.6.nupkg.sha512"
     },
     "Microsoft.AspNetCore.DataProtection.Abstractions/8.0.3": {
       "type": "package",
