@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "aLw+gZ7xj+8=",
+  "success": true,
+  "projectFilePath": "/Users/max/Source/identity-poc/quickstart/src/Client/Client.csproj",
+  "expectedPackageFiles": [
+    "/Users/max/.nuget/packages/identitymodel/7.0.0/identitymodel.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
