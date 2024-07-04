@@ -324,11 +324,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/max/Source/identity-poc/quickstart/src/Api/Api.csproj",
+      "projectUniqueName": "/Users/max/Source/identity-poc/ciampoc/src/Api/Api.csproj",
       "projectName": "Api",
-      "projectPath": "/Users/max/Source/identity-poc/quickstart/src/Api/Api.csproj",
+      "projectPath": "/Users/max/Source/identity-poc/ciampoc/src/Api/Api.csproj",
       "packagesPath": "/Users/max/.nuget/packages/",
-      "outputPath": "/Users/max/Source/identity-poc/quickstart/src/Api/obj/",
+      "outputPath": "/Users/max/Source/identity-poc/ciampoc/src/Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/max/.nuget/NuGet/NuGet.Config"

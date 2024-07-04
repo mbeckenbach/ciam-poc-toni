@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Lw5INVjxrsg=",
+  "dgSpecHash": "0uVuT85IDBw=",
   "success": true,
-  "projectFilePath": "/Users/max/Source/identity-poc/quickstart/src/Api/Api.csproj",
+  "projectFilePath": "/Users/max/Source/identity-poc/Ciampoc/src/Api/Api.csproj",
   "expectedPackageFiles": [
     "/Users/max/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.6/microsoft.aspnetcore.authentication.jwtbearer.8.0.6.nupkg.sha512",
     "/Users/max/.nuget/packages/microsoft.identitymodel.abstractions/7.1.2/microsoft.identitymodel.abstractions.7.1.2.nupkg.sha512",

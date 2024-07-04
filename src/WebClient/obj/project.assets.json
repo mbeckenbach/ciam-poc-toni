@@ -324,11 +324,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/max/Source/identity-poc/quickstart/src/WebClient/WebClient.csproj",
+      "projectUniqueName": "/Users/max/Source/identity-poc/ciampoc/src/WebClient/WebClient.csproj",
       "projectName": "WebClient",
-      "projectPath": "/Users/max/Source/identity-poc/quickstart/src/WebClient/WebClient.csproj",
+      "projectPath": "/Users/max/Source/identity-poc/ciampoc/src/WebClient/WebClient.csproj",
       "packagesPath": "/Users/max/.nuget/packages/",
-      "outputPath": "/Users/max/Source/identity-poc/quickstart/src/WebClient/obj/",
+      "outputPath": "/Users/max/Source/identity-poc/ciampoc/src/WebClient/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/max/.nuget/NuGet/NuGet.Config"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/max/Source/identity-poc/quickstart/src/IdentityServer/IdentityServer.csproj": {}
+    "/Users/max/Source/identity-poc/Ciampoc/src/IdentityServer/IdentityServer.csproj": {}
   },
   "projects": {
-    "/Users/max/Source/identity-poc/quickstart/src/IdentityServer/IdentityServer.csproj": {
+    "/Users/max/Source/identity-poc/Ciampoc/src/IdentityServer/IdentityServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/max/Source/identity-poc/quickstart/src/IdentityServer/IdentityServer.csproj",
+        "projectUniqueName": "/Users/max/Source/identity-poc/Ciampoc/src/IdentityServer/IdentityServer.csproj",
         "projectName": "IdentityServer",
-        "projectPath": "/Users/max/Source/identity-poc/quickstart/src/IdentityServer/IdentityServer.csproj",
+        "projectPath": "/Users/max/Source/identity-poc/Ciampoc/src/IdentityServer/IdentityServer.csproj",
         "packagesPath": "/Users/max/.nuget/packages/",
-        "outputPath": "/Users/max/Source/identity-poc/quickstart/src/IdentityServer/obj/",
+        "outputPath": "/Users/max/Source/identity-poc/Ciampoc/src/IdentityServer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/max/.nuget/NuGet/NuGet.Config"

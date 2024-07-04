@@ -55,11 +55,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/max/Source/identity-poc/quickstart/src/Client/Client.csproj",
+      "projectUniqueName": "/Users/max/Source/identity-poc/ciampoc/src/Client/Client.csproj",
       "projectName": "Client",
-      "projectPath": "/Users/max/Source/identity-poc/quickstart/src/Client/Client.csproj",
+      "projectPath": "/Users/max/Source/identity-poc/ciampoc/src/Client/Client.csproj",
       "packagesPath": "/Users/max/.nuget/packages/",
-      "outputPath": "/Users/max/Source/identity-poc/quickstart/src/Client/obj/",
+      "outputPath": "/Users/max/Source/identity-poc/ciampoc/src/Client/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/max/.nuget/NuGet/NuGet.Config"

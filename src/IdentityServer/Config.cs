@@ -31,7 +31,7 @@ public static class Config
     public static IEnumerable<Client> Clients =>
         new Client[]
             {
-                 // machine to machine client (from quickstart 1)
+                 // machine to machine client (from ciampoc 1)
                 new Client
                 {
                     ClientId = "client",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/max/Source/identity-poc/quickstart/src/WebClient/WebClient.csproj": {}
+    "/Users/max/Source/identity-poc/Ciampoc/src/WebClient/WebClient.csproj": {}
   },
   "projects": {
-    "/Users/max/Source/identity-poc/quickstart/src/WebClient/WebClient.csproj": {
+    "/Users/max/Source/identity-poc/Ciampoc/src/WebClient/WebClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/max/Source/identity-poc/quickstart/src/WebClient/WebClient.csproj",
+        "projectUniqueName": "/Users/max/Source/identity-poc/Ciampoc/src/WebClient/WebClient.csproj",
         "projectName": "WebClient",
-        "projectPath": "/Users/max/Source/identity-poc/quickstart/src/WebClient/WebClient.csproj",
+        "projectPath": "/Users/max/Source/identity-poc/Ciampoc/src/WebClient/WebClient.csproj",
         "packagesPath": "/Users/max/.nuget/packages/",
-        "outputPath": "/Users/max/Source/identity-poc/quickstart/src/WebClient/obj/",
+        "outputPath": "/Users/max/Source/identity-poc/Ciampoc/src/WebClient/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/max/.nuget/NuGet/NuGet.Config"
