@@ -25,12 +25,30 @@ public static class Config
     public static IEnumerable<ApiScope> ApiScopes =>
         new ApiScope[]
             {
-                new ApiScope(name: "api1", displayName: "My API")
+                new ApiScope(name: "api1", displayName: "My API"),
+                new ApiScope(name: "crm", displayName: "CRM API"),
             };
 
     public static IEnumerable<Client> Clients =>
         new Client[]
             {
+                // HACK: We use this idp to fake the real crm service account
+                new Client
+                {
+                    ClientId = "idp-itself",
+
+                    // no interactive user, use the clientid/secret for authentication
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+
+                    // secret for authentication
+                    ClientSecrets =
+                    {
+                        new Secret("idp-secret".Sha256())
+                    },
+
+                    // scopes that client has access to
+                    AllowedScopes = { "crm" }
+                },
                 // interactive ASP.NET Core Web App
                 new Client
                 {

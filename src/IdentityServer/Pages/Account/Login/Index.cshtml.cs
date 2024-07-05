@@ -11,6 +11,10 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using IdentityModel.Client;
+using System.Text.Json;
+using System.Security.Claims;
+using IdentityModel;
 
 namespace IdentityServer.Pages.Login;
 
@@ -99,6 +103,85 @@ public class Index : PageModel
             if (_users.ValidateCredentials(Input.Username, Input.Password))
             {
                 var user = _users.FindByUsername(Input.Username);
+
+                // discover endpoints from metadata
+                // HACK: We use this idp to fake the real crm service account
+                var client = new HttpClient();
+                var disco = await client.GetDiscoveryDocumentAsync("https://localhost:5001");
+                if (disco.IsError)
+                {
+                    Console.WriteLine(disco.Error);
+                }
+
+                // request token
+                var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
+                {
+                    Address = disco.TokenEndpoint,
+                    ClientId = "idp-itself",
+                    ClientSecret = "idp-secret",
+                    Scope = "crm"
+                });
+
+                if (tokenResponse.IsError)
+                {
+                    Console.WriteLine(tokenResponse.Error);
+                    Console.WriteLine(tokenResponse.ErrorDescription);
+                }
+
+                Console.WriteLine(tokenResponse.AccessToken);
+
+                // Call our Fake CRM
+                var apiClient = new HttpClient();
+                apiClient.SetBearerToken(tokenResponse.AccessToken!); // AccessToken is always non-null when IsError is false
+
+                Console.WriteLine(">>>>>>>> Query to CRM: " + "https://localhost:4001/contacts/" + user.SubjectId);
+
+                var response = await apiClient.GetAsync("https://localhost:4001/contacts/" + user.SubjectId);
+                if (!response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine(response.StatusCode);
+                }
+                else
+                {
+                    var doc = JsonDocument.Parse(await response.Content.ReadAsStringAsync()).RootElement;
+                    var jsonData = await response.Content.ReadAsStringAsync();
+                    // var contact = JsonSerializer.Deserialize<CRMContact>(await response.Content.ReadAsStringAsync());
+
+                    var options = new JsonSerializerOptions
+                    {
+                        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                    };
+
+                    CRMContact? contact = JsonSerializer.Deserialize<CRMContact>(jsonData, options);
+
+                    Console.WriteLine("------------Received from CRM---------------");
+                    Console.WriteLine("---------------------------");
+                    Console.WriteLine("---------------------------");
+                    Console.WriteLine(JsonSerializer.Serialize(doc, new JsonSerializerOptions { WriteIndented = true }));
+                    Console.WriteLine("---------------------------");
+                    Console.WriteLine("---------------------------");
+                    Console.WriteLine("---------------------------");
+                    if (contact != null) {
+                        user.Claims.Add(new Claim(JwtClaimTypes.Name, contact.DisplayName));
+                        user.Claims.Add(new Claim(JwtClaimTypes.GivenName, contact.FirstName));
+                        user.Claims.Add(new Claim(JwtClaimTypes.FamilyName, contact.LastName));
+                        user.Claims.Add(new Claim(JwtClaimTypes.Email, contact.Email));
+                        user.Claims.Add(new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean));
+                        user.Claims.Add(new Claim(JwtClaimTypes.WebSite, contact.WebSite ?? ""));
+                        user.Claims.Add(new Claim(JwtClaimTypes.Address, JsonSerializer.Serialize(new {
+                            street_address = contact.Street,
+                            locality = contact.City,
+                            postal_code = contact.Zip,
+                            country = contact.Country
+                        }), IdentityServerConstants.ClaimValueTypes.Json));
+                    }
+                }
+
+
+                // TODO: HTTP call to crm using the user id
+                // TODO: Map reponse to test user object
+                // TODO: Go on as before
+
                 await _events.RaiseAsync(new UserLoginSuccessEvent(user.Username, user.SubjectId, user.Username, clientId: context?.Client.ClientId));
                 Telemetry.Metrics.UserLogin(context?.Client.ClientId, IdentityServerConstants.LocalIdentityProvider);
 
